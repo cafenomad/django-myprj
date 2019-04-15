@@ -24,3 +24,7 @@ Quick start
    to create a books (you'll need the Admin app enabled).
 
 5. Visit http://127.0.0.1:8000/books/.
+
+Release log
+-----------
+* 2019/04/16 v0.0.1
