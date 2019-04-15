@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 """books.urls."""
 
-from django.conf.urls import url
+from django.urls import re_path
 from books.views.book import BookListView
 from books.views.book import BookDetailView
 
 
-app_name = 'books'
 urlpatterns = [
-    path('',
-         BookListView.as_view(),
-         name='book'),
 
-    path('book/<int:book_id>/',
-         BookDetailView.as_view(),
-         name='book_detail'),
+    re_path(r'^$',
+            BookListView.as_view(),
+            name='book_top'),
+
+    re_path(r'^(?P<book_id>\d+)/$',
+            BookDetailView.as_view(),
+            name='book_detail'),
 ]
